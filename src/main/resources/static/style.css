@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuggles&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Raleway:ital@1&display=swap");
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  border: 10px solid rgb(73, 170, 234);
+  min-height: 97.5vh;
+  font-family: Lato, sans-serif;
+}
+.container .title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.container .welcome {
+  font-size: 30px;
+  text-align: center;
+  background: rgb(73, 170, 234);
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.container .animalList {
+  margin: 10px;
+}
+.container .animalList .listForGridAnimal {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-auto-rows: 150px;
+  gap: 5px;
+}
+.container .animalList .list .animal {
+  border: 1px solid rgb(73, 170, 234);
+  padding: 10px;
+  box-sizing: border-box;
+  background: rgb(255, 255, 95);
+}
+.container .animalList .list .animal div {
+  margin-top: 5px;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+.container .animalList .list .animal div:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+.container .animalList .list .animal div:first-child {
+  font-weight: 800;
+}
+.container .addAnimal {
+  width: 500px;
+  margin: 30px 10px;
+  border: 2px solid rgb(73, 170, 234);
+  padding: 8px;
+  box-sizing: border-box;
+}
+.container .addAnimal form .infoAnimal {
+  display: flex;
+}
+.container .addAnimal form .infoAnimal label {
+  font-size: 18px;
+  font-style: italic;
+}
+.container .addAnimal form .infoAnimal input {
+  margin: 0 5px 5px 5px;
+  border-radius: 25px;
+  height: 25px;
+  border-color: rgb(73, 170, 234);
+  padding: 8px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+.container .addAnimal form button {
+  display: block;
+  width: 200px;
+  height: 35px;
+  margin: 10px auto 10px auto;
+  background: rgb(255, 255, 95);
+  border-radius: 15px;
+  font-size: 18px;
+}
+.container .addAnimal form button:hover {
+  background: #000;
+  color: white;
+}
+.container .deleteAnimal {
+  width: 500px;
+  margin: 30px 10px;
+  border: 2px solid rgb(73, 170, 234);
+  padding: 8px;
+  box-sizing: border-box;
+}
+.container .deleteAnimal form .infoAnimal {
+  display: flex;
+}
+.container .deleteAnimal form .infoAnimal label {
+  font-size: 18px;
+  font-style: italic;
+}
+.container .deleteAnimal form .infoAnimal input {
+  margin: 0 5px 5px 5px;
+  border-radius: 25px;
+  height: 25px;
+  border-color: rgb(73, 170, 234);
+  padding: 8px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+.container .deleteAnimal form button {
+  display: block;
+  width: 200px;
+  height: 35px;
+  margin: 10px auto 10px auto;
+  background: rgb(255, 255, 95);
+  border-radius: 15px;
+  font-size: 18px;
+}
+.container .deleteAnimal form button:hover {
+  background: #000;
+  color: white;
+}
+.container .updateAnimal {
+  width: 500px;
+  margin: 30px 10px;
+  border: 2px solid rgb(73, 170, 234);
+  padding: 8px;
+  box-sizing: border-box;
+}
+.container .updateAnimal form .infoAnimal {
+  display: flex;
+}
+.container .updateAnimal form .infoAnimal label {
+  font-size: 18px;
+  font-style: italic;
+}
+.container .updateAnimal form .infoAnimal input {
+  margin: 0 5px 5px 5px;
+  border-radius: 25px;
+  height: 25px;
+  border-color: rgb(73, 170, 234);
+  padding: 8px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+.container .updateAnimal form button {
+  display: block;
+  width: 200px;
+  height: 35px;
+  margin: 10px auto 10px auto;
+  background: rgb(255, 255, 95);
+  border-radius: 15px;
+  font-size: 18px;
+}
+.container .updateAnimal form button:hover {
+  background: #000;
+  color: white;
+}

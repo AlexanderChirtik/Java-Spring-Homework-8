@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ZOO</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div class="container">
+    <div class="welcome">Добро пожаловать в наш зоопарк</div>
+    <div class="animalList">
+        <div class="title">Список животных</div>
+        <div class="listForGridAnimal">
+            <div class="list" th:each="a: ${animals}">
+                <div class="animal">
+                    <div th:text="${a.id}"></div>
+                    <div th:text="${a.name}"></div>
+                    <div th:text="${a.age}"></div>
+                    <div th:text="${a.kind}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="addAnimal">
+        <div class="title">Добавьте нового зверя</div>
+        <form action="/zoo" method="post">
+            <div class="infoAnimal">
+                <label for="name">Имя животного</label>
+                <input type="text" id="name" name="name"> <br>
+            </div>
+            <div class="infoAnimal">
+                <label for="age">Возраст животного</label>
+                <input type="text" id="age" name="age"> <br>
+            </div>
+            <div class="infoAnimal">
+                <label for="kind">Вид, к которому принадлежит</label>
+                <input type="text" id="kind" name="kind"> <br>
+            </div>
+            <button type="submit">Добавить в зоопарк</button>
+        </form>
+    </div>
+    <div class="deleteAnimal">
+        <div class="title">Убрать зверя из списка</div>
+        <form action="/zoo/delete" method="post">
+            <div class="infoAnimal">
+                <label for="id">Номер животного</label>
+                <input type="text" id="id" name="id">
+            </div>
+            <button type="submit">Убрать</button>
+        </form>
+    </div>
+    <div class="updateAnimal">
+        <div class="title">Изменить данные о животном</div>
+        <form action="/zoo/update" method="post">
+            <div class="infoAnimal">
+                <label for="idForUpdate">Номер животного</label>
+                <input type="text" id="idForUpdate" name="id">
+            </div>
+            <div class="infoAnimal">
+                <label for="nameForUpdate">Новое имя</label>
+                <input type="text" id="nameForUpdate" name="name">
+            </div>
+            <div class="infoAnimal">
+                <label for="ageForUpdate">Новый возраст</label>
+                <input type="text" id="ageForUpdate" name="age">
+            </div>
+            <div class="infoAnimal">
+                <label for="kindForUpdate">Новый вид</label>
+                <input type="text" id="kindForUpdate" name="kind">
+            </div>
+            <button type="submit">Изменить данные</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
